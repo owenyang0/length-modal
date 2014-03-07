@@ -1,15 +1,15 @@
 var Inch = function(inch) {
-  this.inch = inch;
+    this.inch = inch;
 }
 
 Inch.prototype = Object.create(BaseLength.prototype);
 Inch.prototype.constructor = Inch;
 
 Inch.prototype.getMetaLength = function() {
-  return this.inch;
+    return this.inch;
 }
 
 Inch.prototype.addLength = function(lengthClass) {
-  this.inch = (this.getMetaLength() + lengthClass.getMetaLength());
-  return this.inch;
+    this.inch = (this.getMetaLength() + lengthClass.getMetaLength());
+    return this.inch;
 }

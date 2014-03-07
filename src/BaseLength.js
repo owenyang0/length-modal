@@ -8,10 +8,6 @@ BaseLength.prototype.getMetaLength = function(convertType) {
     return this.length * convertType;
 }
 
-// BaseLength.prototype.getMetaLength = function() {
-//     return -1;
-// }
-
 BaseLength.prototype.getMeasures = function() {
     var metaLength = this.getMetaLength();
     var mile, yard, feet, inch;
