@@ -2,7 +2,6 @@
 
 var Mile = function(mile) {
   this.mile = mile;
-  BaseLength.apply(this, arguments);
 }
 
 Mile.prototype = Object.create(BaseLength.prototype);

@@ -1,6 +1,5 @@
 var Feet = function(feet) {
   this.feet = feet;
-  BaseLength.apply(this, arguments);
 }
 
 Feet.prototype = Object.create(BaseLength.prototype);
