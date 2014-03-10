@@ -9,10 +9,6 @@ Yard.prototype.getMetaLength = function() {
     return this.yard * Convert.YARD_TO_INCH;
 }
 
-// Yard.prototype.getMetaLength = function(Convert.YARD_TO_INCH) {
-//     // return this.yard * Convert.YARD_TO_INCH;
-//     return super()
-// }
 
 Yard.prototype.addLength = function(lengthInstance) {
     var metaLength = (this.getMetaLength() + lengthInstance.getMetaLength());

@@ -6,23 +6,12 @@ describe("Yard", function() {
     var yard4;
 
     beforeEach(function() {
-        mile1 = new Mile(1);
-        yard1760 = new Yard(1760);
-        yard1761 = new Yard(1761);
-        yard3 = new Yard(3);
-        yard4 = new Yard(4);
+        mile1 = LengthModule.factory("Mile", 1);
+        yard1760 = LengthModule.factory("Yard", 1760);
+        yard1761 = LengthModule.factory("Yard", 1761);
+        yard3 = LengthModule.factory("Yard", 3);
+        yard4 = LengthModule.factory("Yard", 4);
     });
-
-    // it("should be able return meta length", function() {
-    //   var length1 = mile1.getMetaLength();
-    //   var length1760 = yard1760.getMetaLength();
-    //   var length1761 = yard1761.getMetaLength();
-    //   var length4_1760 = yard4.getMetaLength();
-    //   expect(length1).toEqual(1);
-    //   expect(length1760).toEqual(1760);
-    //   expect(length1761).toEqual(1761);
-    //   expect(length4_1760).toEqual(4*1760);
-    // });
 
     it("should be equal when 1 mile to 1760 yard", function() {
         expect(mile1.getMetaLength()).toEqual(yard1760.getMetaLength());

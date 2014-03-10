@@ -1,11 +1,18 @@
-function BaseLength() {}
+function BaseLength(lengthType, length) {
+    this.lengthType = lengthType;
+    this.length = length;
+}
 
 BaseLength.prototype.measures = {};
-BaseLength.prototype.length = {};
 
-// Convert.Type
-BaseLength.prototype.getMetaLength = function(convertType) {
-    return this.length * convertType;
+BaseLength.prototype.getMetaLength = function() {
+    return this.length * ConvertToInch[this.lengthType];
+}
+
+BaseLength.prototype.addLength = function(lengthClass) {
+    var metaLength = (this.getMetaLength() + lengthClass.getMetaLength());
+    this.length = metaLength / ConvertToInch[this.lengthType];
+    return metaLength;
 }
 
 BaseLength.prototype.getMeasures = function() {
@@ -45,10 +52,3 @@ BaseLength.prototype.getPrintMessage = function(onlyInch) {
     }
     return message.join(" ");
 }
-
-// function NewLength () {
-//     BaseLength.apply(this, arguments);
-// }
-
-// NewLength.prototype = Object(BaseLength.prototype);
-// new NewLength().getMetaLength();
